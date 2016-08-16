@@ -17,7 +17,7 @@
 	</properties>
 
 	<dependencies>
-		
+
 		<!-- spring start -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -498,7 +498,18 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar</systemPath>
 		</dependency>
-		
+		<!-- jsoup1.7.2.jar -->
+		<dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.8.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20151123</version>
+        </dependency>
+
 	</dependencies>
 	<build>
 		<finalName>MyAdmin</finalName>
