@@ -21,12 +21,12 @@ public class LoginHandlerInterceptor extends HandlerInterceptorAdapter {
 			return true;
 		}else{
 			//shiro管理的session
-			Subject currentUser = SecurityUtils.getSubject();
-			Session session = currentUser.getSession();
+			//Subject currentUser = SecurityUtils.getSubject();
+			//Session session = currentUser.getSession();
 			
-			
+			return true;
 		}
-		return super.preHandle(request, response, handler);
+		//return super.preHandle(request, response, handler);
 	}
 	
 }

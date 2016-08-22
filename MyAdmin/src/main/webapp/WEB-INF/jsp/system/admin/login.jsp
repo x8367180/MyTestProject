@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	
 	
-	
+	<%@include file="../../../style/style.jsp"%>
 	<!-- start: CSS -->
 	<link id="bootstrap-style" href="static/janux/css/bootstrap.min.css" rel="stylesheet">
 	<link href="static/janux/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -30,7 +30,27 @@
             input[type="text"],input[type="password"]{padding-left:26px;}  
             .checkbox{padding-left:21px;}
 	</style>
-
+	<script type="text/javascript">
+	
+	$(function() {
+		$.ajax({
+			url : '${basePath}/checkUser',
+			data : {},
+			type:'post',
+			dataType:'json',
+			success : function(data) {
+				alert("aaaa"+data[0].key);
+				var dataArray = eval('(' + data[0].key + ')');
+				alert(dataArray[0]);
+			},
+			error : function(){
+				alert("异常");
+			}
+		});
+		
+	});
+	
+	</script>
 </head>
 <body>
 <div class="container-fluid-full col-sm-offset-3 col-md-offset-3">
@@ -128,66 +148,5 @@
 				</ul>
 			</div>
 		</div>
-	<!-- start: JavaScript-->
-
-		<script src="static/janux/js/jquery-1.9.1.min.js"></script>
-	<script src="static/janux/js/jquery-migrate-1.0.0.min.js"></script>
-	
-		<script src="static/janux/js/jquery-ui-1.10.0.custom.min.js"></script>
-	
-		<script src="static/janux/js/jquery.ui.touch-punch.js"></script>
-	
-		<script src="static/js/myjs/login_register.js"></script>
-	
-		<script src="static/janux/js/modernizr.js"></script>
-	
-		<script src="static/janux/js/bootstrap.min.js"></script>
-	
-		<script src="static/janux/js/jquery.cookie.js"></script>
-	
-		<script src='static/janux/js/fullcalendar.min.js'></script>
-	
-		<script src='static/janux/js/jquery.dataTables.min.js'></script>
-
-		<script src="static/janux/js/excanvas.js"></script>
-	<script src="static/janux/js/jquery.flot.js"></script>
-	<script src="static/janux/js/jquery.flot.pie.js"></script>
-	<script src="static/janux/js/jquery.flot.stack.js"></script>
-	<script src="static/janux/js/jquery.flot.resize.min.js"></script>
-	
-		<script src="static/janux/js/jquery.chosen.min.js"></script>
-	
-		<script src="static/janux/js/jquery.uniform.min.js"></script>
-		
-		<script src="static/janux/js/jquery.cleditor.min.js"></script>
-	
-		<script src="static/janux/js/jquery.noty.js"></script>
-		
-		<script src="static/janux/js/jquery.tips.js"></script>
-	
-		<script src="static/janux/js/jquery.elfinder.min.js"></script>
-	
-		<script src="static/janux/js/jquery.raty.min.js"></script>
-	
-		<script src="static/janux/js/jquery.iphone.toggle.js"></script>
-	
-		<script src="static/janux/js/jquery.uploadify-3.1.min.js"></script>
-	
-		<script src="static/janux/js/jquery.gritter.min.js"></script>
-	
-		<script src="static/janux/js/jquery.imagesloaded.js"></script>
-	
-		<script src="static/janux/js/jquery.masonry.min.js"></script>
-	
-		<script src="static/janux/js/jquery.knob.modified.js"></script>
-	
-		<script src="static/janux/js/jquery.sparkline.min.js"></script>
-	
-		<script src="static/janux/js/counter.js"></script>
-	
-		<script src="static/janux/js/retina.js"></script>
-
-		<script src="static/janux/js/custom.js"></script>
-	<!-- end: JavaScript-->
 </body>
 </html>
